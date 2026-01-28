@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { InterfaceLanguage } from '../types';
-import { getGeminiClient } from '../services/gemini';
-import { TRANSLATIONS, APP_COLORS } from '../constants';
+import { ... } from './types';
+import { ... } from './gemini';
+import { ... } from './constants';
 
 interface AITutorProps {
   lang: InterfaceLanguage;
