@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Exercise, ExerciseType, InterfaceLanguage, LocalizedString } from '../types';
-import { TRANSLATIONS } from '../constants';
-import { generateSpeech, evaluateUserSpeech } from '../services/gemini';
+import { Exercise, ExerciseType, InterfaceLanguage, LocalizedString } from './types';
+import { TRANSLATIONS } from './constants';
+import { generateSpeech, evaluateUserSpeech } from './gemini';
 import { playAudio } from './AudioPlayer';
 
 interface LessonSessionProps {
