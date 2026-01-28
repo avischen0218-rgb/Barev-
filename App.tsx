@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { InterfaceLanguage, UserProgress, LocalizedString, Exercise, Lesson, LearnedWord } from './types';
 import { MOCK_UNITS, TRANSLATIONS, SUGGESTED_TOPICS } from './constants';
-import LessonSession from './components/LessonSession';
-import AITutor from './components/AITutor';
-import { generateAIDynamicLesson, generateSpeech } from './services/gemini';
-import { playAudio } from './components/AudioPlayer';
+import LessonSession from './LessonSession';
+import AITutor from './AITutor';
+import { generateAIDynamicLesson, generateSpeech } from './gemini';
+import { playAudio } from './AudioPlayer';
 
 const STORAGE_KEY = 'armenilearn_pro_v5_progress';
 
