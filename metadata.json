@@ -1,0 +1,7 @@
+{
+  "name": "Barev! - 亞美尼亞語啟蒙冒險",
+  "description": "與小獅子利昂一起展開亞美尼亞語的魔法之旅。從一聲『Barev!』開始，探索古老的文化、歷史與語言。",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

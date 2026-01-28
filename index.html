@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Barev! - 亞美尼亞語學習魔法</title>
+    
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- iOS support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Barev!">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%238B0000%22/><text y=%22.95em%22 font-size=%2275%22 x=%2212%22>🦁</text></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes confetti {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #D4AF37;
+            top: -10px;
+            z-index: 200;
+            pointer-events: none;
+            animation: confetti 4s linear forwards;
+        }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #FDFCF0;
+            color: #2D3436;
+            -webkit-tap-highlight-color: transparent;
+            overflow-x: hidden;
+            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+        }
+        .font-royal {
+            font-family: 'Cinzel', serif;
+        }
+        .armenian-pattern {
+            background-image: url("https://www.transparenttextures.com/patterns/black-linen.png"), 
+                              linear-gradient(45deg, rgba(212, 175, 55, 0.05) 25%, transparent 25%, transparent 50%, rgba(212, 175, 55, 0.05) 50%, rgba(212, 175, 55, 0.05) 75%, transparent 75%, transparent);
+            background-size: 100px 100px;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FDFCF0; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
+        * { user-select: none; -webkit-user-select: none; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="armenian-pattern">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
